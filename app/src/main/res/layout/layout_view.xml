@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.lc.demo.view.MyViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="top|left"
+        android:background="@color/purple_200">
+
+
+        <com.lc.demo.view.MyViewA
+            android:id="@+id/viewA"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/teal_200"/>
+
+        <com.lc.demo.view.MyViewB
+            android:id="@+id/viewB"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/teal_200"/>
+
+    </com.lc.demo.view.MyViewGroup>
+
+
+    <com.lc.demo.view.MyLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom">
+
+        <com.lc.demo.view.MyButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click"
+            android:onClick="BtnClick"/>
+    </com.lc.demo.view.MyLinearLayout>
+
+
+
+</FrameLayout>

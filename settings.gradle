@@ -1,0 +1,3 @@
+include ':javaBase'
+include ':app'
+rootProject.name = "InterViewCode"
