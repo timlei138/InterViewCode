@@ -1,10 +1,10 @@
 plugins {
     id 'com.android.application'
+    id 'com.lc.AsmPlugin'
 }
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "com.lc.demo"
@@ -36,4 +36,19 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+
+class CustomInnerConfig{
+    String key
+}
+
+extensions.create("customInnerConfig",CustomInnerConfig.class)
+
+task("customInnerTask",group: 'CustomTask').doLast{
+    println("CustomInnerTask,key=${customInnerConfig.key}")
+}
+
+//使用
+customInnerConfig{
+    key='inner key'
 }

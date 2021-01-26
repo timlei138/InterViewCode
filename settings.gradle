@@ -1,3 +1,4 @@
+include ':asmPlugin'
 include ':javaBase'
 include ':app'
 rootProject.name = "InterViewCode"
